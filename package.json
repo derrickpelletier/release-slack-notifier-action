@@ -1,0 +1,24 @@
+{
+  "name": "release-slack-notifier-action",
+  "version": "0.0.1",
+  "description": "Send slack message when a release is published",
+  "main": "src/index.js",
+  "scripts": {
+    "compile": "ncc build src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derrickpelletier/release-slack-notifier-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derrickpelletier/release-slack-notifier-action/issues"
+  },
+  "homepage": "https://github.com/derrickpelletier/release-slack-notifier-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "bent": "^7.3.12"
+  }
+}

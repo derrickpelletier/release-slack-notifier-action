@@ -1,0 +1,15 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  releas_notifier:
+    runs-on: ubuntu-latest
+    name: Notify on release
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Release notify step
+        env:
+          RELEASE_SLACK_WEBHOOK: ${{ secrets.RELEASE_SLACK_WEBHOOK }}
+        uses: ./

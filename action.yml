@@ -1,0 +1,5 @@
+name: 'Release Slack Notifier'
+description: 'Send slack message when a release is published'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
