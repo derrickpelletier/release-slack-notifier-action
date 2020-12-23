@@ -3,7 +3,7 @@ on:
     types: [published]
 
 jobs:
-  releas_notifier:
+  release_notifier:
     runs-on: ubuntu-latest
     name: Notify on release
     steps:
