@@ -6378,6 +6378,7 @@ module.exports = async ({
   webhook,
 }) => {
   const message = {
+    text: `New release: ${repo}: ${name}`,
     blocks: [
       {
         type: 'header',
