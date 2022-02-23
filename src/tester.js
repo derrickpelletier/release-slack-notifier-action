@@ -4,7 +4,7 @@ const complexBody = `
 ## What’s Changed
 
 - [Some PR title - (#123)](https://github.com/derrickpelletier/node-status/pull/123) @derrickpelletier
-- [Foobar title - (#122)](https://github.com/derrickpelletier/node-status/pull/122) @derrickpelletier
+- [Foobar title - (#122)](https://github.com/derrickpelletier/node-status/pull/122) @fizz
 
 `
 

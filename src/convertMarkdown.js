@@ -16,7 +16,7 @@ module.exports = async (message) => {
   // if we have a name map, use it, otherwise leave github name sans-@
   processed = processed.replace(/@(\S+)/gm, (a, b) => {
     const mapped = config.mappedNames[b]
-    return mapped ? `@${mapped}` : b
+    return mapped ? `<@${mapped}>` : b
   })
   
   return processed
