@@ -1,7 +1,8 @@
 name: 'Release Slack Notifier'
 description: 'Send slack message when a release is published'
-icon: 'bell'
-color: 'purple'
+branding:
+  icon: 'bell'
+  color: 'purple'
 runs:
   using: 'node12'
   main: 'dist/index.js'
