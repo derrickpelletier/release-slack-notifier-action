@@ -1,10 +1,8 @@
-const mappedNames = (process.env.HANDLE_MAP || '').split(',').reduce((acc, i) => {
-  const [originalName, newName] = i.split('->')
-  acc[originalName] = newName
-  return acc
-}, {})
+const getConfig = require('./getConfig');
 
-module.exports = (message) => {
+module.exports = async (message) => {
+  const config = await getConfig()
+  
   let processed = message
   // bullets are not possible
 
@@ -17,8 +15,8 @@ module.exports = (message) => {
   // Usernames
   // if we have a name map, use it, otherwise leave github name sans-@
   processed = processed.replace(/@(\S+)/gm, (a, b) => {
-    const mapped = mappedNames[b]
-    return mappedNames[b] ? `@${mapped}` : b
+    const mapped = config.mappedNames[b]
+    return mapped ? `@${mapped}` : b
   })
   
   return processed
