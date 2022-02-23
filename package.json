@@ -19,6 +19,7 @@
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0",
-    "bent": "^7.3.12"
+    "bent": "^7.3.12",
+    "js-yaml": "^4.1.0"
   }
 }
