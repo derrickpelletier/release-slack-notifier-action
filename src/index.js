@@ -1,13 +1,15 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const sendMessage = require('./sendMessage');
+const convertMarkdown = require('./convertMarkdown');
 
 try {
+  const convertedBody = convertMarkdown(github.context.payload.release.body)
   sendMessage({
     name: github.context.payload.release.name,
     tag: github.context.payload.release.tag_name,
     repo: github.context.payload.repository.name,
-    body: github.context.payload.release.body,
+    body: convertedBody,
     authorName: github.context.payload.release.author.login,
     authorUrl: github.context.payload.release.author.html_url,
     authorImage: github.context.payload.release.author.avatar_url,
